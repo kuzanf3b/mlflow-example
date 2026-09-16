@@ -9,7 +9,7 @@ on:
       - master
  
 env:
-  CSV_URL: "Project/wine-quality.csv"
+  CSV_URL: "wine-quality.csv"
   TARGET_VAR: "quality"
   ALPHA: 0.5
   L1_RATIO: 0.5
@@ -43,4 +43,4 @@ jobs:
       # Run as a mlflow project
       - name: Run mlflow project
         run: |
-          mlflow run Project --env-manager=local 
+          mlflow run . --env-manager=local 
